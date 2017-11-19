@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<annotation-spec>
+	<head>
+		<valuetype-def>
+			<valueset name="PositionValueSet">
+				<value-el>LLB</value-el>
+				<value-el>LLS</value-el>
+				<value-el>LLF</value-el>
+				<value-el>LMB</value-el>
+				<value-el>LMS</value-el>
+				<value-el>LMF</value-el>
+				<value-el>LRB</value-el>
+				<value-el>LRS</value-el>
+				<value-el>LRF</value-el>
+				<value-el>PLB</value-el>
+				<value-el>PLS</value-el>
+				<value-el>PLF</value-el>
+				<value-el>PMB</value-el>
+				<value-el>PMS</value-el>
+				<value-el>PMF</value-el>
+				<value-el>PRB</value-el>
+				<value-el>PRS</value-el>
+				<value-el>PRF</value-el>
+				<value-el>MLB</value-el>
+				<value-el>MLS</value-el>
+				<value-el>MLF</value-el>
+				<value-el>MMB</value-el>
+				<value-el>MMS</value-el>
+				<value-el>MMF</value-el>
+				<value-el>MRB</value-el>
+				<value-el>MRS</value-el>
+				<value-el>MRF</value-el>
+				<value-el>SLB</value-el>
+				<value-el>SLS</value-el>
+				<value-el>SLF</value-el>
+				<value-el>SMB</value-el>
+				<value-el>SMS</value-el>
+				<value-el>SMF</value-el>
+				<value-el>SRB</value-el>
+				<value-el>SRS</value-el>
+				<value-el>SRF</value-el>
+				<value-el>ULB</value-el>
+				<value-el>ULS</value-el>
+				<value-el>ULF</value-el>
+				<value-el>UMB</value-el>
+				<value-el>UMS</value-el>
+				<value-el>UMF</value-el>
+				<value-el>URB</value-el>
+				<value-el>URS</value-el>
+				<value-el>URF</value-el>
+			</valueset>
+			<valueset name="TrendValueSet">
+				<value-el>LeLF</value-el>
+				<value-el>LeLS</value-el>
+				<value-el>LeLB</value-el>
+				<value-el>LeMF</value-el>
+				<value-el>LeMS</value-el>
+				<value-el>LeMB</value-el>
+				<value-el>LeRF</value-el>
+				<value-el>LeRS</value-el>
+				<value-el>LeRB</value-el>
+			</valueset>
+			<valueset name="PoseValueSet">
+				<value-el>Bent</value-el>
+				<value-el>Straight</value-el>
+			</valueset>
+		</valuetype-def>
+	</head>
+	<body>
+		<group name="Posture">
+			<group name='Head'>
+				<track-spec name="HeadPosition" type="primary">
+					<attribute display="true" name="HeadPositionValue" valuetype="PositionValueSet"/>
+				</track-spec>
+			</group>
+			<group name='Left Shoulder'>
+				<track-spec name="LeftShoulderPosition" type="primary">
+					<attribute display="true" name="LeftShoulderPositionValue" valuetype="PositionValueSet"/>
+				</track-spec>
+			</group>
+			<group name='Left Arm'>
+				<track-spec name="LeftArmPose" type="primary">
+					<attribute display="true" name="LeftArmPoseValue" valuetype="PoseValueSet"/>
+				</track-spec>
+				<track-spec name="LeftArmPosePosition" type="primary">
+					<attribute display="true" name="LeftArmPosePositionValue" valuetype="PositionValueSet"/>
+				</track-spec>
+			</group>
+			<group name='Right Shoulder'>
+				<track-spec name="RightShoulderPosition" type="primary">
+					<attribute display="true" name="RightShoulderPositionValue" valuetype="PositionValueSet"/>
+				</track-spec>
+			</group>
+			<group name='Right Arm'>
+				<track-spec name="RightArmPose" type="primary">
+					<attribute display="true" name="RightArmPoseValue" valuetype="PoseValueSet"/>
+				</track-spec>
+				<track-spec name="RightArmPosition" type="primary">
+					<attribute display="true" name="RightArmPositionValue" valuetype="PositionValueSet"/>
+				</track-spec>
+			</group>
+			<group name='Left Lower Limb'>
+				<track-spec name="LeftLowerLimbPose" type="primary">
+					<attribute display="true" name="LeftLowerLimbPoseValue" valuetype="PoseValueSet"/>
+				</track-spec>
+				<track-spec name="LeftLowerLimbPosition" type="primary">
+					<attribute display="true" name="LeftLowerLimbPositionValue" valuetype="PositionValueSet"/>
+				</track-spec>
+			</group>
+			<group name='Right Lower Limb'>
+				<track-spec name="RightLowerLimbPose" type="primary">
+					<attribute display="true" name="RightLowerLimbPoseValue" valuetype="PoseValueSet"/>
+				</track-spec>
+				<track-spec name="RightLowerLimbPosition" type="primary">
+					<attribute display="true" name="RightLowerLimbPositionValue" valuetype="PositionValueSet"/>
+				</track-spec>
+			</group>
+			<track-spec name="TrunkPose" type="primary">
+				<attribute display="true" name="TrunkPoseValue" valuetype="PoseValueSet"/>
+			</track-spec>
+				
+			<track-spec name="BodyPose" type="primary">
+				<attribute display="true" name="BodyPoseValue" valuetype="TrendValueSet"/>
+			</track-spec>
+			
+		</group>
+		<track-spec name="Actions" type="primary">
+			<attribute display="true" name="ActionsValue" valuetype="String"/>
+		</track-spec>
+	</body>
+</annotation-spec>
